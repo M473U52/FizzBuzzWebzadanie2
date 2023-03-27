@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+ViewData["Title"] = "Fizz Buzz";
+}
+<div class="text-left">
+<h1 class="display-4">Welcome @Model.Name</h1>
+<span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
+<form method="post">
+<label asp-for="FizzBuzz.Number"></label>
+<input asp-for="FizzBuzz.Number" /><br />
+<br />
+<button type="submit">Zatwierdź</button>
+</form>
+</div>
+<br />
+<div class="alert alert-primary" role="alert">
+  @Model.Text
+</div>
+
